@@ -1,4 +1,4 @@
-package MinimumTimeToMakeRopeColorful;
+package DyanamicProgramming.MinimumTimeToMakeRopeColorful;
 
 /*
     1578. Minimum Time to Make Rope Colorful

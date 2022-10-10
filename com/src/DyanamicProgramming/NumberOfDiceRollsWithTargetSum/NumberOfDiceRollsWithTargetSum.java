@@ -1,4 +1,4 @@
-package NumberOfDiceRollsWithTargetSum;
+package DyanamicProgramming.NumberOfDiceRollsWithTargetSum;
 
 public class NumberOfDiceRollsWithTargetSum {
     public static void main(String[] args) {
