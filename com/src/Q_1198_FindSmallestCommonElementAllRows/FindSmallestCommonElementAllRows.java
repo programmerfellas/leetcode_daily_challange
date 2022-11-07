@@ -1,7 +1,6 @@
-package FindSmallestCommonElementAllRows;
+package Q_1198_FindSmallestCommonElementAllRows;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class FindSmallestCommonElementAllRows {
 
@@ -46,6 +45,35 @@ public class FindSmallestCommonElementAllRows {
             for(int j = 0; j < mat[0].length; j++){
                 bucket[mat[i][j]]++;
                 if(bucket[mat[i][j]] == mat.length) return mat[i][j];
+            }
+        }
+        return -1;
+    }
+
+    public static int smallestCommonElement4(int[][] mat) {
+        int count[] = new int[10001];
+        int n = mat.length, m = mat[0].length;
+        for (int j = 0; j < m; ++j) {
+            for (int i = 0; i < n; ++i) {
+                if (++count[mat[i][j]] == n) {
+                    return mat[i][j];
+                }
+            }
+        }
+        return -1;
+    }
+
+    public int smallestCommonElement3(int[][] mat) {
+        int count[] = new int[10001];
+        int n = mat.length, m = mat[0].length;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                ++count[mat[i][j]];
+            }
+        }
+        for (int k = 1; k <= 10000; ++k) {
+            if (count[k] == n) {
+                return k;
             }
         }
         return -1;
