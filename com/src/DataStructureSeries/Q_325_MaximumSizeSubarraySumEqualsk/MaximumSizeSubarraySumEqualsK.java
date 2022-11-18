@@ -1,7 +1,8 @@
-package Q_325_MaximumSizeSubarraySumEqualsk;
+package DataStructureSeries.Q_325_MaximumSizeSubarraySumEqualsk;
 
 import java.util.HashMap;
 
+// https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/?envType=study-plan&id=data-structure-iii
 public class MaximumSizeSubarraySumEqualsK {
 
     public static void main(String[] args) {
