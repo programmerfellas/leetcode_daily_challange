@@ -42,8 +42,7 @@ class SnakeGame {
             case "R" -> nextMove[1]++;
             case "U" -> nextMove[0]--;
             case "D" -> nextMove[0]++;
-            default -> {
-            }
+            default -> {}
         }
         return nextMove;
     }
@@ -87,4 +86,6 @@ public class DesignSnakeGame {
             System.out.println(snakeGame.move(dir));
         }
     }
+
+
 }
