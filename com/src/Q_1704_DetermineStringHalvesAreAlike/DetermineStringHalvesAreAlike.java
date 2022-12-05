@@ -22,4 +22,21 @@ public class DetermineStringHalvesAreAlike {
         }
         return (first == second);
     }
+
+    private static final String VOWELS = "aeiouAEIOU";
+
+    public boolean halvesAreAlike2(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length() / 2; i++) {
+            if (VOWELS.indexOf(s.charAt(i)) != -1) {
+                count++;
+            }
+        }
+        for (int i = s.length() / 2; i < s.length(); i++) {
+            if (VOWELS.indexOf(s.charAt(i)) != -1) {
+                count--;
+            }
+        }
+        return count == 0;
+    }
 }

@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class MinimumTimeKillAllMonsters {
 
-
     public static void main(String[] args) {
         int[] power = {3,1,4};
         System.out.println(minimumTime(power));
