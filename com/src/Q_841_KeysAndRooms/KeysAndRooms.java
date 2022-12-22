@@ -1,9 +1,6 @@
 package Q_841_KeysAndRooms;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class KeysAndRooms {
 
@@ -64,6 +61,23 @@ public class KeysAndRooms {
         for (boolean v: seen)  // if any room hasn't been visited, return false
             if (!v) return false;
         return true;
+    }
+
+    public boolean canVisitAllRooms3ß(List<List<Integer>> rooms) {
+        Set<Integer> visited = new HashSet<>();
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(0);
+        visited.add(0);
+        while (!queue.isEmpty()) {
+            int removed = queue.remove();
+            for (Integer nextRoom : rooms.get(removed)) {
+                if (!visited.contains(nextRoom)) {
+                    queue.add(nextRoom);
+                    visited.add(nextRoom);
+                }
+            }
+        }
+        return visited.size() == rooms.size();
     }
 
 }
